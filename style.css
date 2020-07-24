@@ -1,0 +1,80 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  height: 100vh;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.timesection,.soundpicker,.player{
+  height: 80%;
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.player{
+ position: relative;
+}
+.player svg{
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+video{
+  position: fixed;
+  top:0%;
+  left: 0%;
+  width:100%;
+  z-index:-10;
+
+}
+.time-display{
+  position: absolute;
+  bottom: 5%;
+  color: white;
+  font-size: 30px;
+}
+.timesection button,.soundpicker button{
+  color: white;
+  width: 30%;
+  height: 10%;
+  background: none;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: all 0.5s ease;
+
+}
+.timesection button:hover{
+  color:black;
+  background: white;
+}
+.soundpicker button{
+  border: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 30px;
+}
+.soundpicker button:nth-child(1){
+  background-color: #4972a1;
+}
+.soundpicker button:nth-child(2){
+  background-color: #a14f49;
+}
+.soundpicker button img{
+  height: 100%;
+}
